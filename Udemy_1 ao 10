@@ -1,0 +1,62 @@
+#Exercícios 1 ao 10 do Curso de Análise de Dados UDEMY.
+
+# 1: Escreva um programa que mostre a mensagem 'Hello World!' na tela.
+print("Hello World!   ")
+
+# 2: Faça um programa que solicite um número do usuário e apresente a seguinte mensagem na tela: "O número digitado foi [número]".
+n = int(input("Digite um número: "))
+print(f"O número digitado foi {n}") 
+
+#3: Escreva um programa que solicite o nome e o sobrenome do usuário. Ao final o programa deverá apresentar o nome completo do usuário na tela. 
+nome=input('Digite seu primeiro nome: ').strip().title()
+sobrenome=input('Digite seu sobrenome: ').strip().title()
+print(f'{nome} {sobrenome}')
+
+# 4: Faça um programa que solicite três números inteiros do usuário e imprima a soma destes.
+num1=int(input('Número 1: '))
+num2=int(input('Número 2: '))
+num3=int(input('Número 3: '))
+print(f'{num1}+{num2}+{num3}={num1+num2+num3}')
+
+#5: Escreva um programa que solicite duas notas do usuário e apresente a média na tela da seguinte forma: "A média das notas [nota1] e [nota2] é [média]"
+nota1=float(input('Nota 1: \n'))
+nota2=float(input('Nota 2: \n'))
+media=(nota1+nota2)/2
+print(f'A média das notas {nota1} e {nota2} é {media}')
+
+# 6:Faça um programa que calcule a raiz quadrada de um número. O usuário deve inserir um número e o programa deve mostrar na tela o resultado 
+# da raiz quadrada do número inserido. 
+num=float(input('Digite um número: '))
+print(f'A raiz quadrada de {num} é {num**(1/2)}')
+
+# 7: Faça um programa que peça 5 números de ponto flutuante do usuário e apresente no final a média dos números digitados.
+soma = 0
+
+for i in range(1,6):
+    n = int(input(f"Digute o {i}o. número: "))
+    soma += n
+
+media = soma / i
+
+print(f"A média dos números digitados é de {media}")
+
+# 8: Escreva um programa que faça a conversão de um dado valor de metro para quilômetro.
+n = float(input("Digite uma distancia em metros: "))
+print(f"{n}m equivale a {n/1000}kms")
+
+# 9: Escreva um programa que calcule a área de uma circunferência. O usuário deve digitar o valor do raio e ao final o programa deverá mostrar na 
+# tela a área da circunferência. Use a fórmula: área=pi*r² , em que pi é uma constante e r o raio da circunferência (usar a biblioteca math para pegar a constante pi.)
+from math import pi
+
+raio = float(input("Digite o raio da circunferência: "))
+print(f"A área da cirunferência é {pi * raio **2:.2f}")
+
+# 10: Faça um programa que peça uma temperatura em Fahrenheit (F) e converta esta temperatura para grau Celsius (C), mostrando o resultado da conversão na tela.
+
+# C = 5 * ((F-32) / 9).
+
+
+temp_f = float(input("Digite a temperatura em Farenheit: "))
+temp_c = 5 * ((temp_f - 32)) /9
+
+print(f"{temp_f}F são {temp_c}C")

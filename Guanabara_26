@@ -1,0 +1,18 @@
+# Guanabara 26:
+
+#Fazer um programa que lê uma frase e diz:
+# Quantas letras "A" existem na mesma
+# Dizer a posição onde a primeira letra "A" aparece
+# E a ultima posição da letra "A"
+   
+            
+frase = input("Digite uma frase: ").lower().strip()
+
+#Quantidade de letras A:
+print(f"A letra A aparece {frase.count("a")} vezes na frase")
+
+#posição onde a primeira letra "A" aparece:
+print(f"A primeira letyra A apareceu na posição {frase.find("a")+1}")
+
+#ultima posição da letra "A":
+print(f"A última posição da letra A apareceu na posição {frase.rfind("a")+1}")

@@ -1,0 +1,28 @@
+# Guanabara 27:
+
+#Fazer um programa que lê o nome de uma pessoa e diz qual o primeiro e o ultimo nome dela: 
+
+nome = input("Digite seu nome completo: ").lower().strip()
+
+# Descobrindo o primeiro nome: 
+    # Achar onde acontece o primeiro backspace:
+posição = nome.find(" ")
+
+# Criar uma variável adicionando o nome com a posição do início ":" até a posição do primeiro backspace: 
+primeiro_nome = nome[:posição]
+
+# Descobrindo o último nome: 
+    #Fazer o mesmo processo que o primeiro nome, adicionando apenas a orientação "R" = right:
+
+posição_final = nome.rfind(" ")
+
+ultimo_nome = nome[posição_final:]
+
+print(f"Muito prazer {primeiro_nome} {ultimo_nome}")
+
+
+# OOOUUU: 
+
+nome2 = input("Digite seu nome completo: ").lower().strip().split() #O Split separa a string em pedaços
+
+print(f"Muito prazer {nome2[0]} {nome2[len(nome2)-1]}") # ( -1 ultimo )

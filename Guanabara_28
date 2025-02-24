@@ -1,0 +1,16 @@
+
+# Faça um programa que sorteie um número de 0 a 5, e que o usuário tenha 1 tentativa para acertar o mesmo. 
+# No final mostre se ele ganhou, qual o número sorteado e qual o escolhido pelo mesmo.
+
+import random
+from time import sleep #Faz o pc "dormir" alguns segundos
+
+numero_sorteado = random.randint(0,5)
+
+n = int(input("Tente adivinhar o número sorteado entre 0 e 5... : "))
+print("Processando...")
+sleep(2) #espere 2 segndos
+if n == numero_sorteado:
+    print(f"Parabéns, você acertou!! O número sorteado é {numero_sorteado}")
+else:
+    print(f"A que pena, você não acertou... O número sorteado é {numero_sorteado}, e você escolheu o número {n}")

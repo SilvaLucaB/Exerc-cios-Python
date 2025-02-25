@@ -1,4 +1,3 @@
-
 # Faça um programa que sorteie um número de 0 a 5, e que o usuário tenha 1 tentativa para acertar o mesmo. 
 # No final mostre se ele ganhou, qual o número sorteado e qual o escolhido pelo mesmo.
 

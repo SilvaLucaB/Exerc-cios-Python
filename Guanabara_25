@@ -1,6 +1,4 @@
-#Desafio 25 Guanabara - Python
-
-# Verificando se existe a palavra Silva no nome do usuário:
+# Verifique se existe a palavra Silva no nome do usuário:
 
 n = input("Qual é o seu nome completo?: ").strip().upper()
 print("SILVA" in n)

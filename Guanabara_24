@@ -1,4 +1,3 @@
-#Desafio 24 Guanabara - Python
 # Verificando as primeiras letras de um texto.
 # O programa deverá perguntar a cidade onde o usuário nasceu e retornar TRUE caso a
 # mesma seja SANTO "alguma coisa", e False para nomes de cidades que não comecem com SANTO.

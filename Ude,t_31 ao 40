@@ -1,0 +1,144 @@
+# 31: Utilize o módulo datetime e mostre na tela a data e hora atual do sistema de acordo com o formato descrito abaixo.
+
+import datetime
+ 
+data_atual=datetime.datetime.now()
+print(data_atual.strftime('%d/%m/%Y - %H:%M:%S'))
+#------------------------------------------------------------------------------------------------------------------------------
+# 32: Escreva um programa que inverta uma string. Exemplos:
+# Hello World!/ !dlroW olleH
+
+string1='Hello World!'
+print(string1[::-1])
+#------------------------------------------------------------------------------------------------------------------------------
+
+# 33: Escreva um programa para mostrar na tela o calendário do mês de dezembro de 2020. 
+import calendar
+print(calendar.month(2020,12))
+#------------------------------------------------------------------------------------------------------------------------------
+
+# 34: Modifique o programa anterior e permita que o usuário especifique o ano e o mês a serem mostrados na tela.
+import calendar
+ano=int(input('Ano: '))
+mes=int(input('Mês: '))
+
+print(calendar.month(ano,mes))
+#------------------------------------------------------------------------------------------------------------------------------
+
+# 35: Escreva um script que mostre na tela o preço de um produto associado a uma categoria especificada pelo usuário. Utilize como referência as 
+# informações a seguir. Caso o usuário não digite uma categoria válida (número entre 1 e 10) mostre na tela uma mensagem personalizada.
+
+categoria = int(input("Digite a categoria do produto: "))
+
+if categoria == 1:
+    print(f"O preço do produto vale R$0.5 ")
+elif categoria == 2:
+        print(f"O preço do produto vale R$11.3 ")
+elif categoria == 3:
+        print(f"O preço do produto vale R$17.5 ")
+elif categoria == 4:
+        print(f"O preço do produto vale R$33.97 ")
+elif categoria == 5:
+        print(f"O preço do produto vale R$103.47 ")
+elif categoria == 6:
+        print(f"O preço do produto vale R44.67 ")
+elif categoria == 7:
+        print(f"O preço do produto vale R$12.55 ")
+elif categoria == 8:
+        print(f"O preço do produto vale R$14.87 ")
+elif categoria == 9:
+        print(f"O preço do produto vale R$98.2 ")
+elif categoria == 10:
+        print(f"O preço do produto vale R$131.4 ")
+#------------------------------------------------------------------------------------------------------------------------------
+
+#36: Resolva o exercício anterior para as categorias de 1 a 8. Utilize estruturas aninhadas.
+
+categoria=int(input('Categoria do produto: '))
+if categoria==1:
+    print('Preço: $ 0.5')
+else:
+    if categoria==2:
+        print('Preço: $ 11.35')
+    else:
+        if categoria==3:
+            print('Preço: $ 17.5')
+        else:
+            if categoria==4:
+                print('Preço: $ 33.97')
+            else:
+                if categoria==5:
+                    print('Preço: $ 103.47')
+                else:
+                    if categoria==6:
+                        print('Preço: $ 44.67')
+                    else:
+                        if categoria==7:
+                            print('Preço: $ 12.55')
+                        else:
+                            if categoria==8:
+                                print('Preço: $ 14.87')
+                            else:
+                                print('Categoria inválida.')
+#------------------------------------------------------------------------------------------------------------------------------
+
+# 37: Determine se uma letra inserida pelo usuário é uma vogal ou consoante. Armazene as vogais em uma lista e implemente sua solução. Desconsidere a possibilidade de o usuário inserir números ou caracteres especiais.
+
+letra=input('Digite uma letra: ')
+vogais=['a','e','i','o','u']
+if letra in vogais:
+    print('A letra digitada é uma vogal.')
+else:
+    print('A letra digitada é uma consoante.')
+    
+#------------------------------------------------------------------------------------------------------------------------------
+
+# 38: Escreva um script para classificar um triângulo de acordo com o tamanho dos seus lados. Considere as seguintes informações:
+
+# Triângulo equilátero: todos os lados possuem o mesmo tamanho;
+# Trângulo escaleno: todos os lados possuem medidas diferentes;
+# Triângulo isósceles: caracterizado por ter dois lados com o mesmo tamanho.
+
+l1 = int(input("Digite o tamanho do primeiro lado: "))
+l2 = int(input("Digite o tamanho do segundo lado: "))
+l3 = int(input("Digite o tamanho do terceiro lado: "))
+
+if l1 == l2 and l1 == l3 and l2 == l3:
+    print("TRIÂNGULO EQUILÁTERO")
+elif l1 == l2 or l1 == l3 or l2 == l3:
+    print("TRIÂNGULO ISÓSCELES")
+else:
+    print('TRIÂNGULO ESCALENO') 
+#------------------------------------------------------------------------------------------------------------------------------
+ 
+# 39: Implemente uma calculadora simples com as operações aritméticas básicas. O usuário deverá especificar a operação desejada (+,-,*,/) e 
+# seguidamente inserir dois valores. Caso, o usuário escolha divisão e insira o valor do denominar 0 mostre uma mensagem personalizada. Para os demais casos,
+# mostre na tela o resultado da operação desejada.
+
+operacao = input("Escolha a operação desejada (+, -, *, /): ")
+
+if operacao in['+', '-', '*', '/']:
+    n1 = float(input('Número 1: '))
+    n2 = float(input('Número 2: '))
+    if operacao == '+':
+        print(f"{n1} + {n2} = {n1+n2}")
+    elif operacao == '-':
+        print(f"{n1} + {n2} = {n1-n2}")
+    elif operacao == '*':
+        print(f"{n1} + {n2} = {n1*n2}")
+    elif operacao == '/':
+        print(f"{n1} + {n2} = {n1/n2}")
+    else:
+        if n2 == 0:
+            print("O denominador precisa ser diferente de zero")
+        else:
+            print(f"{n1}/{n2}={n1}/{n2}")
+else:
+    print("Opção inválida.")
+    
+#------------------------------------------------------------------------------------------------------------------------------
+
+# 40: Escreva um programa que mostre de 1 até 50 na tela.
+
+for i in range(1, 51):
+    print(i)

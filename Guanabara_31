@@ -1,0 +1,10 @@
+#Faça um programa que pergunte a distancia da viagem do usuário e calcule o valor da mesma baseada na mesma.
+PS: Até 200km = 0.45 por km, acima disso 0.45 (pq está na promoção)
+
+dist = float(input("Qual a distância da sua viagem ? (Km): "))
+
+if dist > 200:
+    print(f"Você está prestes a começar uma iagem de {dist}Kms... \n Portanto o valor da sua passagem é R${dist * 0.45}")
+else:
+    print(f"Você está prestes a começar uma iagem de {dist}Kms... \n Portanto o valor da sua passagem é {dist * 0.50}")
+    

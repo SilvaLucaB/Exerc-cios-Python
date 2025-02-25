@@ -1,0 +1,9 @@
+#Faça um programa que leia o salário de um funcionário, e calcule o reajuste salarial do mesmo seguindo os seguintes critérios:
+# Salários superiores a 1.250.00 ganham 10% de aumento. Salários inferiores a isso ganham 15% de aumento. 
+
+sal_atual = float(input("Qual o seu salário atual ? R$"))
+
+if sal_atual > 1250:
+    print(f"Quem ganhava R${sal_atual} passa a ganhar {sal_atual * 0.1 + sal_atual}") # 10 % de aumento
+else:
+    print(f"Quem ganhava R${sal_atual} passa a ganhar R${sal_atual * 0.15 + sal_atual}") # 15% de aumento

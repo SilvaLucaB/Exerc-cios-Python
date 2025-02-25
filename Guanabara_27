@@ -1,6 +1,4 @@
-# Guanabara 27:
-
-#Fazer um programa que lê o nome de uma pessoa e diz qual o primeiro e o ultimo nome dela: 
+#Faça um programa que lê o nome de uma pessoa e diz qual o primeiro e o ultimo nome dela: 
 
 nome = input("Digite seu nome completo: ").lower().strip()
 

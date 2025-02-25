@@ -1,6 +1,4 @@
-# Guanabara 26:
-
-#Fazer um programa que lê uma frase e diz:
+#Faça um programa que lê uma frase e diz:
 # Quantas letras "A" existem na mesma
 # Dizer a posição onde a primeira letra "A" aparece
 # E a ultima posição da letra "A"

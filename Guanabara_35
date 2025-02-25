@@ -1,0 +1,14 @@
+# Analisador de Triãngulos: Faça um programa que leia o comprimento de 3 retas e diga se podem ou não formar um triangulo.
+# PS: Para formar um triangulo a soma de 2 lados deve ser menos que o terceiro. 
+
+r1 = float(input("Digite o tamanho da 1a. reta: "))
+r2 = float(input("Digite o tamanho da 2a. reta: "))
+r3 = float(input("Digite o tamanho da 3a. reta: "))
+
+if r1 < r2 + r3 and r2 < r1 + r3 and r3 < r1 + r2:
+    print("É possível formar um triângulo!")
+else:
+    print("Não é possível formar um triangulo")
+
+# (2 4 9 NÃO
+# 3.5 2.75 4 SIM) 

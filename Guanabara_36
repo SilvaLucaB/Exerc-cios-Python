@@ -1,0 +1,28 @@
+# Condições Aninhadas #
+
+# Desafio 36
+
+# Escreva um programa para aprovar o empréstimo bancário para a compra de uma casa. O programa vai perguntar
+# o valor da casa, o salário do comprador e em quantos anos ele vai pagar.
+
+# Calcule o valor da prestação mensal sabendo que ela não pode exceder 30% do salário ou então o 
+# empréstimo será negado
+
+
+# 1: Recolhendo as informações necessárias: 
+valor_casa = float(input("Digite o valor da casas R$"))
+salario_comprador = float(input("Digite o salário do comprador R$"))
+tempo_financiamento = int(input("Quantos anos de financiamento?: "))
+
+# 2: Calculo da prestação mensal: 
+prestação = valor_casa / (tempo_financiamento * 12) # 12 meses a cada ano. 
+print(f"Para pagar {valor_casa} em {tempo_financiamento} anos a prestação da casa é R${prestação:.2f}")
+
+# Descobrir os 30% do salário do comprador:
+trinta_por_cento = salario_comprador * 0.30 # (0.30 = 30$ )
+
+#Condição para saber se aprova ou não
+if prestação > trinta_por_cento:
+    print("Empréstimo Negado")
+else:
+    print("Empréstimo Aprovado")

@@ -1,0 +1,15 @@
+# Desafio 38
+
+#Comparando números
+
+# Escreva um programa que leia dois números e mostre quem é o maior ou se são iguais
+
+n1 = int(input("Digite o 1o. número: "))
+n2 = int(input("Digite o 2o. número: "))
+
+if n1 > n2:
+    print(f"O {n1} é o maior número")
+elif n2 > n1:
+    print(f"O {n2} é o maior número")
+else:
+    print("Os dois valores são IGUAIS")

@@ -1,0 +1,32 @@
+# Desafio 39
+
+#Comparando números
+
+# Escreva um programa que leia o ano de nascimento do usuário e retorne quantos anos o usuário tem, quantos anos faltam para o mesmo se alistar e em que ano ele se alistará,
+# e se caso o mesmo já seja maior de 18, mostre a idade, a quanto tempo ele ja deveria ter se alistado e em que ano foi o seu alistamento.
+
+import datetime
+
+ano_atual = datetime.datetime.now().year #2025
+
+nasc = int(input("Em que ano você nasceu?: "))
+#Descobrindo a idade:
+idade = ano_atual - nasc
+
+#Descobrindo quanto tempo falta para o alistamento cas < 18:
+tempo_p_alis1 = 18 - idade
+
+# caso > 18:
+tempo_p_alis2 = abs(tempo_p_alis1) # transofrmando em positivo o valor pq o mesmo já passou da data porém não existe -5 anos....
+
+#Descobrindo o ano em que ele se alistará:
+ano_alist = ano_atual + tempo_p_alis1
+
+
+
+if idade == 18:
+    print("Voce tem que se alistar imediatamente!!!")
+elif idade < 18:
+    print(f"Você nasceu em {nasc}, por isso tem {idade} anos. \n Faltam {tempo_p_alis1} anos para o seu alistamento. \n O seu alistamento será no ano de {ano_alist}.")
+elif idade > 18: 
+    print(f"Você nasceu em {nasc}, por isso tem {idade} anos.\n Você já deveria ter se alistado à {tempo_p_alis2} anos. \n O seu alistamento foi no ano de {ano_alist}.")

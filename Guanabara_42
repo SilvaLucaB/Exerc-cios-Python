@@ -1,0 +1,23 @@
+# Desafio 42
+
+#Analisador de triangulo V2 (melhoria do desafio 35)
+
+# Escreva um programa que leia três segmentos de reta e diga se ele pode formar um triangulo e qual o seu tipo:
+# todos os lados iguais : EQUILÁTERO
+# 2 lados iguais ISÓSCELES
+# todos diferentes : ESCALENO
+
+r1 = int(input("Digite o primeiro segmento de reta: "))
+r2 = int(input("Digite o segundo segmento de reta: "))
+r3 = int(input("Digite o terceiro segmento de reta: "))
+
+if r1 < r2 + r3 and r2 < r1 + r3 and r3 < r1 + r2:
+    print(" \n É possível formar um triângulo do tipo: ")
+    if r1 == r2 and r1 == r3 and r2 == r3:
+        print("EQUILÁTERO! ")
+    elif r1 == r2 or r1 == r3 or r2 == r3:
+        print("ISÓSCELES!")
+    elif r1 != r2 and r1 != r3 and r2 != r3:
+        print("ESCALENO! ")
+else:
+    print("Não é possível formar um triangulo")

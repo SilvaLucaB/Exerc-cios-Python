@@ -1,0 +1,19 @@
+# Desafio 40
+
+#Média de notas
+
+# Escreva um programa que leia duas notas de umm aluno, calcule sua média e mostre ao final APROVADO caso a média seja maior que 7. RECUPERAÇÃO, se  média entre 5 e 6.9. E 
+# REPROVADO se média menor que 5.
+
+n1 = float(input("Digite a 1a. nota: "))
+n2 = float(input("Digite a 2a. nota: "))
+
+media = (n1 + n2)/2
+
+if media >= 7:
+    print(f"Média {media}, APROVADO!!!")
+elif media <= 6.9 and media >= 5:
+    print(f"Média {media}, RECUPERAÇÃO...")
+else:
+    print(f"Média {media}, REPROVADO.")
+

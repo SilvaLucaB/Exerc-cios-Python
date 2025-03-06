@@ -1,0 +1,47 @@
+# Desafio 44
+
+#Gerenciador de Pagamentos
+
+# Escreva um programa que leia o valor da compra e mostre um menu com as seguintes opções:
+# [1] à vista dinheiro/cheque
+# [2] à vista cartão
+# [3] 2x no cartão
+# [4] 3x ou mais no cartão 
+
+#Pagamentos: 
+# Caso seja a opção [1], ganhe 10% de desconto
+# Caso seja a opção [2], ganhe 5% de desconto
+# Caso seja a opção [3], preço normal
+# E caso seja a opção [4], pergunte o número de parcelas, mostre o valor das mesmas e acrescente uma taxa de juros de 20%.
+
+print("-=-=-=--=-=--=-=-=----=-=---=--=-=-=--=-=---=-=-=-=-=")
+print("             Loja de Cubos Mágicos BR's                     ")
+print("-=-=-=--=-=--=-=-=----=-=---=--=-=-=--=-=---=-=-=-=-=")
+
+compra = float(input("Digite o valor da sua compra R$"))
+print("-=-=-=--=-=--=-=-=----=-=---=--=-=-=--=-=---=-=-=-=-= \n                FORMAS DE PAGAMENTO")
+
+print("[1] à vista dinheiro/cheque \n[2] à vista cartão \n[3] 2x no cartão \n[4] 3x ou mais no cartão\n")
+
+
+opcao = int(input("Como deseja finalizar a compra? : "))
+
+desc_op1 = compra - (compra * 0.1) # - 10%
+desc_op2 = compra - (compra * 0.05) # - 5%
+juros_credito = compra + ( compra * 0.2) # + 20%
+
+if opcao == 1:
+    print(f"Sua compra de R${compra} vai custar R${desc_op1} no final.")
+elif opcao == 2:
+        print(f"Sua compra de R${compra} vai custar R${desc_op2} no final.")
+elif opcao == 3:
+            print(f"Sua compra de R${compra} não obteve descontos, por isso ainda vai custar R${compra} no final.")
+else:
+    op_4 = int(input("Quantas parcelas deseja ?: "))
+    if op_4 == 2:
+        print(f"Sua compra de R${compra} vai custar R${desc_op2} no final.")
+    elif op_4 == 3:
+        print(f"Sua compra de R${compra} não obteve descontos, por isso ainda vai custar R${compra} no final.")
+    else:
+        parcela_credito = juros_credito / op_4 # valor das parcelas 
+        print(f"Sua compra de R${compra} vai custar R${juros_credito} no final\nA mesma será parcelada em {op_4}x de {parcela_credito} COM JUROS")

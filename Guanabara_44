@@ -36,7 +36,7 @@ elif opcao == 2:
         print(f"Sua compra de R${compra} vai custar R${desc_op2} no final.")
 elif opcao == 3:
             print(f"Sua compra de R${compra} não obteve descontos, por isso ainda vai custar R${compra} no final.")
-else:
+elif opcao == 4:
     op_4 = int(input("Quantas parcelas deseja ?: "))
     if op_4 == 2:
         print(f"Sua compra de R${compra} vai custar R${desc_op2} no final.")
@@ -45,3 +45,5 @@ else:
     else:
         parcela_credito = juros_credito / op_4 # valor das parcelas 
         print(f"Sua compra de R${compra} vai custar R${juros_credito} no final\nA mesma será parcelada em {op_4}x de {parcela_credito} COM JUROS")
+else:
+    print("OPÇÃO INVÁLIDA")

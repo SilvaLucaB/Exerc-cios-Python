@@ -1,0 +1,29 @@
+# Desafio 43
+
+#Analisador de IMC
+
+# Escreva um programa que leia a altura e o peso do usuário e calcule seu IMC e o classifique de acordo com as condições abaixo: 
+# Abaixo de 18.5 = ABAIXO DO PESO
+# Entre 18.5 e 25 = PESO IDEAL 
+# Entre 25 e 30 = SOBREPESO
+# Entre 30 e 40: OBESIDADE
+# Acima de 40: Obesidade Mórbida
+
+# Lembrando que o IMC é calculado por PESO dividido por ALTURA ao quadrado
+
+peso = float(input("Digite o seu peso em (kg): "))
+altura = float(input("Digite a sua altura em metros (m): "))
+
+imc = peso / (altura ** 2)
+print(f"O seu Indice de Massa Corporal é {imc:.2f}")
+
+if imc < 18.5:
+    print("ABAIXO DO PESO")
+elif imc >= 18.5 and imc < 25:
+    print("PESO IDEAL")
+elif imc >= 25 and imc < 30:
+    print("SOBREPESO")
+elif imc >= 30 and imc < 40:
+    print("OBESIDADE")
+else:
+    print("OBESIDADE MÓRBIDA")

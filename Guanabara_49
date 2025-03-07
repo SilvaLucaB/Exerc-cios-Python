@@ -1,0 +1,10 @@
+# Desafio 49
+
+# STabuada v2 com laço FOR
+
+# Escreva um programa que faça a tabuada com o valor que o usuário escolher usando o laço FOR.
+
+n = int(input("Deseja ver a tabuada de qual número ?: "))
+
+for c in range(1,11):
+    print(f"{n} x {c} = {n*c}")

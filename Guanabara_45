@@ -1,0 +1,64 @@
+# Desafio 45
+
+# Game Pedra Papel Tesoura
+
+# Escreva um programa que leia a opção de jogada do usuário com as seguintes opções:
+# [0] PEDRA
+# [1] PAPEL
+# [2] TESOURA
+
+# E mostre essa jogada com um sorteio aleatório da máquina, retornando logo após o VENCEDOR.
+
+import time 
+import random as r
+
+print("=-=-=--=-=----------=---=-=-=--=-=")
+print("   GAME PEDRA PAPEL OU TESOURA  ")
+print("=-=-=--=-=----------=---=-=-=--=-=")
+
+itens = ('Pedra', 'Papel', 'Tesoura')
+comp = r.randint(0,2) #Abreviei random para r
+
+print("Suas opções: ")
+print("[0] PEDRA\n[1] PAPEL\n[2] TESOURA")
+jogador = int(input("Qual é a sua jogada?: "))
+time.sleep(1)
+print("JO")
+time.sleep(1)
+print("KEN")
+time.sleep(1)
+print("PO")
+print("=-=-=--=-=----------=---=-=-=--=-=")
+print(f"Computador jogou {itens[comp]}")
+print(f"Jogador jogou {itens[jogador]}")
+print("=-=-=--=-=----------=---=-=-=--=-=")
+
+#Condições: 
+if comp == 0: #PC PEDRA
+    if jogador == 0:
+        print("EMPATE")  
+    elif jogador == 1: #jog papel
+        print("Jogador Vence")
+    elif jogador == 2: #Jog tesoura
+        print("Computador Vence")
+    else:
+        print("Jogada inválida")
+elif comp == 1: #PC PAPEL
+    if jogador == 1:
+        print("EMPATE")  
+    elif jogador == 0: #jog pedra
+        print("Computador Vence")
+    elif jogador == 2:
+        print("Jogador Vence")
+    else:
+        print("Jogada inválida")
+elif comp == 2: #PC TESOURA
+    if jogador == 2: # jog pedra
+        print("EMPATE")  
+    elif jogador == 1: #jog papel 
+        print("Computador Vence")
+    elif jogador == 0: #jog pedra
+        print("Jogador Vence")      
+    else:
+        print("Jogada inválida")
+        

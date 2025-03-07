@@ -1,0 +1,14 @@
+# Desafio 47
+
+# Contagem de PARES
+
+# Escreva um programa que mostre todos os numeros pares de 1 a 50 (com estrutura de repetição)
+
+pares = []
+
+for c in range(50,1,-1):
+    if c % 2 == 0:
+        pares.append(c)
+   
+pares.sort() #Ordenando-os em ordem crescente     
+print(pares)

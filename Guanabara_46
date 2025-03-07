@@ -1,0 +1,13 @@
+# Desafio 46
+
+# Contagem Regressiva
+
+# Escreva um programa que faça uma contagem regressiva de 10 ao 0
+
+import time 
+
+for i in range(10,-1,-1):
+    time.sleep(1)
+    print(i)
+    
+print("BUUMM BUM POOOOOW!")

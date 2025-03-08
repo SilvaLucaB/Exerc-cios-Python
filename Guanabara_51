@@ -1,0 +1,21 @@
+# Desafio 51
+
+# Progressão aritmética
+
+# Escreva um programa que leia um numero e mostre os 10 termos de sua PA
+
+n = int(input("primeiro termo: "))  # primeiro
+r = int(input("Razão: ")) #'pulo
+
+
+#Vou colocar em variáveis assim para ficar mais fácil a lógica das mesmas.
+inicio = n
+pulo = r
+
+#formula pra achar o 10 o. PA de um número:
+fim = n + (10 - 1) * r
+
+for c in range(inicio, fim + pulo, pulo):
+    print((c), end=' -> ')
+print("ACABOU")
+   

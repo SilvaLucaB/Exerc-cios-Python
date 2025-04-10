@@ -1,0 +1,27 @@
+# Desafio 59: Crie um programa que leia dois valores e mostre um menu como o abaixo:
+# [1] Somar / [2] Multiplicar / [3] Maior / [4] Novos numeros / [5] sair do programa
+# O programa deve realizar a operação solicitada em cada caso. 
+
+n1 = int(input("Digite o 1o. número: "))
+n2 = int(input("Digite o 2o. número: "))
+opcao = 0
+while opcao != 5:
+    print("[1] Somar \n[2] Multiplicar \n[3] Maior numero \n[4] Novos números \n[5] Sair do programa")
+    opcao = int(input("Digite alguma opção: "))
+    
+    if opcao == 1:
+        print(f" >>>>>>> A soma entre {n1} e {n2} é {n1+n2}")  
+    elif opcao == 2:
+        print(f" >>>>>>> {n1} x {n2} é {n1 * n2}")
+    elif opcao == 3: 
+        if n1 > n2:
+            print(f" >>>>>>> O número {n1} é o maior.")
+        else:
+            print(f" >>>>>>> O número {n2} é o maior.")
+    elif opcao == 4:
+        n1 = int(input("Digite o 1o. número: "))
+        n2 = int(input("Digite o 2o. número: "))
+    elif opcao == 5:
+        print(" >>>>>>> Programa encerrado.")
+        break
+    else: print(" >>>>>>> Dados inválidos. Tente novamente: ")

@@ -1,0 +1,25 @@
+# Desafio 58: Jogo da advinhação 2.0... Melhore o desafio 28 fazendo com que o computador "pense" em um número de 0 a 10. Só que agora
+# o jogador vai tentar advinhar até acertar, mostrando no final quantos palpites foram necessários paea vencer.
+
+from random import randint
+
+computador = randint(0,10)
+print("Sou seu PC, acabei de pensar em um número entre 0 e 10 \nSerá que você consegue advinhar? ")
+
+palpites = 0
+
+acertou = False
+while not acertou:
+    jogador = int(input("Qual é o seu palpite ?: "))
+    palpites += 1
+    if jogador == computador:
+        acertou = True
+        "Acertou!"
+    else:
+        if jogador < computador:
+            print("Mais....Tente novamente")
+        elif jogador > computador:
+            print("Menos....Tente novamente!")
+        
+
+print(f"Acertou com {palpites} palpites. Parabéns!")
